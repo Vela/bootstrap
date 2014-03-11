@@ -29,7 +29,7 @@
 
     // Detect and use data-width if available
     if (this.options.width) {
-      this.$element.find('.modal-dialog').css({maxWidth: this.options.width + 'px'});
+      this.$element.find('.modal-dialog').css({width: 'auto', maxWidth: this.options.width + 'px'});
     }
 
     // Detect and use data-height if available
