@@ -810,7 +810,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     // Detect and use data-width if available
     if (this.options.width) {
-      this.$element.find('.modal-dialog').css({width: this.options.width + 'px'});
+      this.$element.find('.modal-dialog').css({maxWidth: this.options.width + 'px'});
     }
 
     // Detect and use data-height if available
