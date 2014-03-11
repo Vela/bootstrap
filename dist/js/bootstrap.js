@@ -807,6 +807,17 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
           this.$element.trigger('loaded.bs.modal')
         }, this))
     }
+
+    // Detect and use data-width if available
+    if (this.options.width) {
+      this.$element.find('.modal-dialog').css({width: this.options.width + 'px'});
+    }
+
+    // Detect and use data-height if available
+    if (this.options.height) {
+      this.$element.find('.modal-dialog').css({height: this.options.height + 'px'});
+      this.$element.find('.modal-content').css({height: '100%'});
+    }
   }
 
   Modal.DEFAULTS = {
